@@ -71,7 +71,7 @@ const Popup: React.FC = () => {
     loadChromeStorage()
   }, [])
 
-  const heandelModel = async (v: ValidModel) => {
+  const handleModel = async (v: ValidModel) => {
     if (v) {
       const { setSelectModel, getKeyModel, selectModel } = useChromeStorage()
       setSelectModel(v)
@@ -110,7 +110,7 @@ const Popup: React.FC = () => {
                 select a model
               </label>
               <Select
-                onValueChange={(v: ValidModel) => heandelModel(v)}
+                onValueChange={(v: ValidModel) => handleModel(v)}
                 value={selectedModel}
               >
                 <SelectTrigger className="w-full">
